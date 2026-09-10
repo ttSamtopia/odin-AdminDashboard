@@ -1,3 +1,5 @@
+/* Main Layout */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -34,14 +36,20 @@ body {
     min-height: 100vh;
 }
 
+
+/* Sidebar Layout */
 .sidebar-container {
     grid-area: 1 / 1 / span 2 / span 1;
 }
 
+
+/* Header Layout */
 .header-container {
     grid-area: 1 / 2 / span 1 / span 1;
 }
 
+
+/* Main Content Layout */
 .main-container {
     grid-area: 2 / 2 / span 1 / span 1;
 }
