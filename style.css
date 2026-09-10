@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: 1px solid red;
 }
 
 body {
@@ -9,16 +10,38 @@ body {
     min-height: 100vh;
 }
 
+/* Delete this later */
 .bg-template {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 100;
     opacity: 0.25;
     background-image: url("./images/template.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: none;
+}
+
+.page-container {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: min-content 1fr;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.sidebar-container {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.header-container {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.main-container {
+    grid-area: 2 / 2 / span 1 / span 1;
 }
